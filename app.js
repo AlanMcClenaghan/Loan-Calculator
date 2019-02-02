@@ -2,9 +2,6 @@
 const loader = document.getElementById('loading');
 loader.style.display = 'none';
 
-
-
-
 // Listen for submit
 const loanForm = document.getElementById('loan-form');
 loanForm.addEventListener('submit', calculateResults);
@@ -35,6 +32,28 @@ function calculateResults(e) {
     totalPayment.value = (monthly * calculatedPayments).toFixed(2);
     totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2);
   } else {
-    console.log('Please check your figures')
+    showError('Please check your figures')
   }
+}
+
+function showError(error) {
+
+  // Get Elements
+  const card = document.querySelector('.card');
+  const heading = document.querySelector('h1');
+
+  // Create div
+  const errorDiv = document.createElement('div');
+  // Add classes
+  errorDiv.classList = "alert alert-danger"
+  // Create text node and append to div
+  errorDiv.appendChild(document.createTextNode(error));
+
+  // Insert error above heading
+  card.insertBefore(errorDiv, heading);
+
+  // Clear error after 3 seconds
+  setTimeout(function () {
+    errorDiv.remove();
+  }, 3000);
 }
