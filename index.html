@@ -10,7 +10,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+  <style>
+    #loading, #results {
+      display: none;
+    }
+  
+  </style>
+
+  <title>Loan Calculator</title>
 </head>
 
 <body class="bg-dark">
@@ -44,23 +51,25 @@
             <img src="img/loading.gif" alt="Loading...">
           </div>
           <!-- RESULTS -->
-          <h5>Results</h5>
-          <div class="form-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Monthly Payment</span>
-              <input type="number" class="form-control" id="monthly-payment" disabled>
+          <div id="results">
+            <h5>Results</h5>
+            <div class="form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Monthly Payment</span>
+                <input type="number" class="form-control" id="monthly-payment" disabled>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Total Payment</span>
-              <input type="number" class="form-control" id="total-payment" disabled>
+            <div class="form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Total Payment</span>
+                <input type="number" class="form-control" id="total-payment" disabled>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Total Interest</span>
-              <input type="number" class="form-control" id="total-interest" disabled>
+            <div class="form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Total Interest</span>
+                <input type="number" class="form-control" id="total-interest" disabled>
+              </div>
             </div>
           </div>
         </div>
